@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Successguard</title>
+<header class="text-gray-400 bg-gray-900 body-font">
+  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+    <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-yellow-500 rounded-full" viewBox="0 0 24 24">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+      </svg>
+      <span class="ml-3 text-xl">Successguard</span>
+    </a>
+    <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+        <a href="Home.html" class="mr-5 hover:text-white">Home</a>
+        <a href="About.html" class="mr-5 hover:text-white">About Us</a>
+        <a href="Search.html" class="mr-5 hover:text-white">Search</a>
+        <a href="Contact.html" class="mr-5 hover:text-white">Contact Us</a>
+        <a href="Help.html" class="mr-5 hover:text-white">Help</a>
+      </nav>
+    <button class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">Logout
+    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+        <path d="M5 12h14M12 5l7 7-7 7"></path>
+      </svg>
+    </button>
+  </div>
+</header>
+<style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    #myInput {
+      background-image: url('/css/searchicon.png');
+      background-position: 10px 12px;
+      background-repeat: no-repeat;
+      width: 100%;
+      font-size: 16px;
+      padding: 12px 20px 12px 40px;
+      border: 1px solid #ddd;
+      margin-bottom: 12px;
+    }
+    
+    #myUL {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    #myUL li a {
+      border: 1px solid #ddd;
+      margin-top: -1px; /* Prevent double borders */
+      background-color: #f6f6f6;
+      padding: 12px;
+      text-decoration: none;
+      font-size: 18px;
+      color: black;
+      display: block
+    }
+    
+    #myUL li a:hover:not(.header) {
+      background-color: #eee;
+    }
+    </style>
+    </head>
+
+    <!-- from here  -->
+    <body>
+    <input type="text" id="myInput" onkeyup="myFunction()"  placeholder="SEARCH COLLEGE" title="Type in a name">
+     
+    <ul id="myUL">
+      <li><a href="Search.html">Shri Vile Parle Kelvani Mandal Institute Of Technology,Dhule</a></li>
+      <li><a href="Search.html">Shri Shivaji Vidya Prasarak Sanstha,Dhule</a></li>
+      <li><a href="Search.html">Mumbai Education Trust MET's Institute Of Technology Of Nashik</a></li>
+    
+      <li><a href="Search.html">Samarth Educational Trust's Arvind Gavali College Of Engineering </a></li>
+      <li><a href="Search.html">Dr.Vasantraodada Patil Shetkari Shikshan Mandals,Sangali Padmabhushan Vasantraodada Patil Institute Of Technology</a></li>
+      
+    
+      <li>
+    </ul>
+    
+    <script>
+    function myFunction() {
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myUL");
+        li = ul.getElementsByTagName("li");
+        for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[0];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    }
+    </script>
+    <script src="index.js"></script>
+    </body>
+    <!-- to here -->
+
+</html>
